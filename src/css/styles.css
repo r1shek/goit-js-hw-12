@@ -33,17 +33,19 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  gap: 10px; /* Відстань між картками */
 }
 
 .image-card {
-  width: 20%;
-  margin: 10px;
+  width: calc(20% - 10px); /* Ширина картки з урахуванням відступу */
+  margin: 0; /* Скидання зовнішніх відступів, щоб уникнути додаткових відстаней */
   display: flex;
   flex-direction: column;
+  box-sizing: border-box; /* Включає відступи та рамки у ширину і висоту елемента */
 }
 
 .image-card img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -55,4 +57,9 @@
 
 .details p {
   margin: 0;
+}
+
+#load-more {
+  display: none; /* Спочатку приховано */
+  margin: 20px auto;
 }
